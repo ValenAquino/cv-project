@@ -4,7 +4,7 @@ import { Cv } from "./Cv";
 
 export function Main() {
   return (
-    <main className="grid grid-cols-2 gap-10 p-16 h-screen">
+    <main className="grid grid-cols-1 mx-24 p-16 h-screen gap-5">
       <Form />
       <Cv />
     </main>
