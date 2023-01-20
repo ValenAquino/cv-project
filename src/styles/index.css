@@ -5,3 +5,14 @@
 .material-symbols-outlined {
   font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 48;
 }
+
+.input {
+  @apply bg-slate-700 placeholder-slate-400 p-2.5 rounded-lg 
+  text-sm text-white border-2 border-slate-700
+  focus:border-2 focus:border-blue-300 focus:outline-none focus:outline-transparent;
+}
+
+.btn {
+  @apply p-3 bg-orange-400
+hover:bg-orange-700 w-fit justify-self-start rounded-full;
+}

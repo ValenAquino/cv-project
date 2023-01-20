@@ -5,7 +5,7 @@ import { Footer } from "./components/Footer";
 
 export function App() {
   return (
-    <div className="bg-slate-900 h-fit text-white">
+    <div className="bg-slate-900 h-max text-white">
       <NavBar />
       <Main />
       <Footer />
