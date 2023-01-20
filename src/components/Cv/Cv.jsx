@@ -1,7 +1,10 @@
+import React from "react";
+import { Header } from "./Header";
+
 export function Cv() {
   return (
-    <div className="bg-slate-300 lg:px-10 p-10 rounded-lg">
-      <h1>Cv</h1>
+    <div className="bg-slate-200 lg:px-10 p-10">
+      <Header />
     </div>
   );
 }

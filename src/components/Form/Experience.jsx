@@ -1,5 +1,5 @@
 import React from "react";
-import { ExperienceForm } from "./ExperienceForm";
+import { ExperienceForm } from "./components/ExperienceForm";
 
 export function Experience() {
   return (

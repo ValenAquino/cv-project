@@ -1,10 +1,10 @@
 import React from "react";
-import { EducationForm } from "./EducationForm";
+import { EducationForm } from "./components/EducationForm";
 
 export function Education() {
   return (
     <div className="p-12 pt-0 w-full">
-      <h1 className="mb-7 text-3xl font-semibold lg:col-start-1 lg:col-end-4">
+      <h1 className="mb-7 text-3xl font-semibold">
         Educación
       </h1>
       <EducationForm />

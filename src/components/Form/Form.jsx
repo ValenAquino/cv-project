@@ -5,7 +5,7 @@ import { Education } from "./Education";
 
 export function Form() {
   return (
-    <div className="bg-slate-600 lg:px-10 p-10 rounded-lg">
+    <div className="bg-slate-600 lg:px-10 p-10 rounded-md">
       <PersonalInfo />
       <Experience />
       <Education />

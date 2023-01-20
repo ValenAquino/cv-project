@@ -2,7 +2,7 @@ import React from "react";
 
 export function PersonalInfo() {
   const inputStyle = `
-  bg-slate-700 placeholder-slate-400 p-2.5 rounded-lg 
+  bg-slate-700 placeholder-slate-400 p-2.5 rounded-md 
   text-sm text-white border-2 border-slate-700
   focus:border-2 focus:border-blue-300 focus:outline-none focus:outline-transparent`;
 
