@@ -2,8 +2,8 @@ import React from "react";
 
 export function Description() {
   return (
-    <div>
-      <h2>Description</h2>
+    <div className="p-3"> 
+      <h2 className="mb-2 text-3xl">Description</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
         consequuntur molestiae porro magnam doloribus esse minima beatae
