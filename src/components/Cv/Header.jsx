@@ -1,5 +1,5 @@
 export function Header({personalInfo}) {
-  const headerStyle = "bg-gradient-to-r from-blue-700 to-blue-900 p-9 h-fit";
+  const headerStyle = "bg-gradient-to-r from-blue-700 to-blue-900 p-9";
   const headerGrid = "col-start-1 col-end-4"
 
   return (
