@@ -9,6 +9,10 @@ export function Form({
   modifyExperience,
   experiences,
   removeExperience,
+  education,
+  addEducation,
+  modifyEducation,
+  removeEducation,
 }) {
   return (
     <div className="bg-slate-600 lg:px-10 p-10 rounded-md">
@@ -19,7 +23,12 @@ export function Form({
         modifyExperience={modifyExperience}
         removeExperience={removeExperience}
       />
-      <Education />
+      <Education 
+        education={education}
+        addEducation={addEducation}
+        modifyEducation={modifyEducation}
+        removeEducation={removeEducation}
+      />
     </div>
   );
 }

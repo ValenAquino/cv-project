@@ -42,22 +42,60 @@ export function Main() {
   }
 
   function removeExperience(id) {
-    setExperiences(experiences.filter(exp => exp.id !== id));
+    setExperiences(experiences.filter((exp) => exp.id !== id));
+  }
+
+  function addEducation() {
+    const educationItem = {
+      id: crypto.randomUUID(),
+      university: "University",
+      degree: "Degree",
+      subject: "Subject",
+      from: "From",
+      to: "To",
+    };
+
+    setEducation([...education, educationItem]);
+  }
+
+  function modifyEducation(id, modified) {
+    setEducation(
+      education.map((exp) => {
+        if (exp.id === id) {
+          return { ...exp, ...modified };
+        } else {
+          return exp;
+        }
+      })
+    );
+  }
+
+  function removeEducation(id) {
+    setEducation(education.filter((exp) => exp.id !== id));
   }
 
   const [personalInfo, setPersonalInfo] = useState(personalData);
   const [experiences, setExperiences] = useState([]);
+  const [education, setEducation] = useState([]);
 
   return (
     <main className="grid grid-cols-1 mx-2 p-16 gap-5 2xl:grid-cols-2 2xl:gap-16 2xl:mx-0 lg:mx-6 xl:mx-24 ">
       <Form
         addPersonalInfo={addPersonalInfo}
+        experiences={experiences}
         addExperience={addExperience}
         modifyExperience={modifyExperience}
-        experiences={experiences}
         removeExperience={removeExperience}
+        education={education}
+        addEducation={addEducation}
+        modifyEducation={modifyEducation}
+        removeEducation={removeEducation}
       />
-      <Cv personalInfo={personalInfo} experiences={experiences} />
+      <Cv
+        personalInfo={personalInfo}
+        experiences={experiences}
+        education={education}
+      />
     </main>
   );
 }
