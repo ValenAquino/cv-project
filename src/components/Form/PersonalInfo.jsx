@@ -7,66 +7,68 @@ export function PersonalInfo({ addPersonalInfo }) {
     focus:border-2 focus:border-blue-300 focus:outline-none focus:outline-transparent`;
 
   return (
-    <div className="px-12 pb-10 grid w-full sm:grid-flow-row md:grid-cols-2 lg:grid-cols-4 gap-3">
-      <h1 className="mb-5 text-3xl font-semibold col-start-1 md:col-end-3 lg:col-end-5">
+    <div className="p-10">
+      <h1 className="mb-5 text-3xl font-semibold">
         Información Personal
       </h1>
-      <input
-        className={`${inputStyle} lg:col-start-1 lg:col-end-3`}
-        type="text"
-        placeholder="Nombre"
-        onChange={(e) => {
-          addPersonalInfo({firstName: e.target.value});
-        }}
-      />
+      <div className="px-4 py-8 bg-slate-500 rounded-md grid w-full sm:grid-flow-row md:grid-cols-2 lg:grid-cols-4 gap-3">
+        <input
+          className={`${inputStyle} lg:col-start-1 lg:col-end-3`}
+          type="text"
+          placeholder="Nombre"
+          onChange={(e) => {
+            addPersonalInfo({ firstName: e.target.value });
+          }}
+        />
 
-      <input
-        className={`${inputStyle} lg:col-start-3 lg:col-end-5`}
-        type="text"
-        placeholder="Apellido"
-        onChange={(e) => {
-          addPersonalInfo({lastName: e.target.value});
-        }}
-      />
+        <input
+          className={`${inputStyle} lg:col-start-3 lg:col-end-5`}
+          type="text"
+          placeholder="Apellido"
+          onChange={(e) => {
+            addPersonalInfo({ lastName: e.target.value });
+          }}
+        />
 
-      <input
-        className={`${inputStyle}`}
-        type="text"
-        placeholder="Title"
-        onChange={(e) => {
-          addPersonalInfo({title: e.target.value});
-        }}
-      />
+        <input
+          className={`${inputStyle}`}
+          type="text"
+          placeholder="Title"
+          onChange={(e) => {
+            addPersonalInfo({ title: e.target.value });
+          }}
+        />
 
-      <input
-        className={`${inputStyle}`}
-        type="text"
-        placeholder="Celular"
-        onChange={(e) => {
-          addPersonalInfo({phone: e.target.value});
-        }}
-      />
+        <input
+          className={`${inputStyle}`}
+          type="text"
+          placeholder="Celular"
+          onChange={(e) => {
+            addPersonalInfo({ phone: e.target.value });
+          }}
+        />
 
-      <input
-        className={`${inputStyle} lg:col-start-3 lg:col-end-5 md:col-start-1 md:col-end-3`}
-        type="text"
-        placeholder="Email"
-        onChange={(e) => {
-          addPersonalInfo({email: e.target.value});
-        }}
-      />
+        <input
+          className={`${inputStyle} lg:col-start-3 lg:col-end-5 md:col-start-1 md:col-end-3`}
+          type="text"
+          placeholder="Email"
+          onChange={(e) => {
+            addPersonalInfo({ email: e.target.value });
+          }}
+        />
 
-      <textarea
-        className={`${inputStyle} lg:col-start-1 lg:col-end-5 resize-none md:col-start-1 md:col-end-3`}
-        rows="5"
-        onChange={(e) => {
-          addPersonalInfo({description: e.target.value});
-        }}
-        defaultValue="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+        <textarea
+          className={`${inputStyle} lg:col-start-1 lg:col-end-5 resize-none md:col-start-1 md:col-end-3`}
+          rows="5"
+          onChange={(e) => {
+            addPersonalInfo({ description: e.target.value });
+          }}
+          defaultValue="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
           voluptatum. Nulla ullam quia dolore eum, excepturi molestiae officia
           exercitationem maxime rem expedita vitae sapiente magni doloremque, iure
           totam aspernatur fuga?"
-      ></textarea>
+        ></textarea>
+      </div>
     </div>
   );
 }

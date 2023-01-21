@@ -18,12 +18,12 @@ export function Main() {
 
   function addExperience() {
     const exp = {
-      id: 0,
-      position: "",
-      company: "",
-      city: "",
-      from: "",
-      to: "",
+      id: crypto.randomUUID(),
+      position: "Position",
+      company: "Company",
+      city: "City",
+      from: "From",
+      to: "To",
     };
 
     setExperiences([...experiences, exp]);
@@ -54,6 +54,7 @@ export function Main() {
         addPersonalInfo={addPersonalInfo}
         addExperience={addExperience}
         modifyExperience={modifyExperience}
+        experiences={experiences}
       />
       <Cv personalInfo={personalInfo} experiences={experiences} />
     </main>

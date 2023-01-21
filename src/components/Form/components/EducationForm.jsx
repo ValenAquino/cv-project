@@ -2,7 +2,7 @@ import React from "react";
 
 export function EducationForm() {
   return (
-    <div className="flex flex-wrap flex-column gap-4 mb-5">
+    <div className="flex flex-wrap flex-column gap-4 mb-5 px-4 py-8 bg-slate-500 rounded-md">
       <input
         className="input grow"
         type="text"

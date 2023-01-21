@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 export function ExperienceForm({ itemID, modifyExperience }) {
   return (
-    <div className="content-center grid gap-3 mb-7 md:grid-cols-4 lg:grid-cols-3">
+    <div className="px-4 py-8 bg-slate-500 rounded-md content-center grid gap-3 mb-7 md:grid-cols-4 lg:grid-cols-3">
       <input
         className="input md:col-start-1 md:col-end-3 lg:col-auto"
         type="text"
