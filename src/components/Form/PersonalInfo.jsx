@@ -1,10 +1,10 @@
 import React from "react";
 
-export function PersonalInfo({ personalInfo, setPersonalInfo }) {
+export function PersonalInfo({ addPersonalInfo }) {
   const inputStyle = `
-  bg-slate-700 placeholder-slate-400 p-2.5 rounded-md 
-  text-sm text-white border-2 border-slate-700
-  focus:border-2 focus:border-blue-300 focus:outline-none focus:outline-transparent`;
+    bg-slate-700 placeholder-slate-400 p-2.5 rounded-md 
+    text-sm text-white border-2 border-slate-700
+    focus:border-2 focus:border-blue-300 focus:outline-none focus:outline-transparent`;
 
   return (
     <div className="px-12 pb-10 grid w-full sm:grid-flow-row md:grid-cols-2 lg:grid-cols-4 gap-3">
@@ -16,7 +16,7 @@ export function PersonalInfo({ personalInfo, setPersonalInfo }) {
         type="text"
         placeholder="Nombre"
         onChange={(e) => {
-          setPersonalInfo({ ...personalInfo, firstName: e.target.value });
+          addPersonalInfo({firstName: e.target.value});
         }}
       />
 
@@ -25,7 +25,7 @@ export function PersonalInfo({ personalInfo, setPersonalInfo }) {
         type="text"
         placeholder="Apellido"
         onChange={(e) => {
-          setPersonalInfo({ ...personalInfo, lastName: e.target.value });
+          addPersonalInfo({lastName: e.target.value});
         }}
       />
 
@@ -34,7 +34,7 @@ export function PersonalInfo({ personalInfo, setPersonalInfo }) {
         type="text"
         placeholder="Title"
         onChange={(e) => {
-          setPersonalInfo({ ...personalInfo, title: e.target.value });
+          addPersonalInfo({title: e.target.value});
         }}
       />
 
@@ -43,7 +43,7 @@ export function PersonalInfo({ personalInfo, setPersonalInfo }) {
         type="text"
         placeholder="Celular"
         onChange={(e) => {
-          setPersonalInfo({ ...personalInfo, phone: e.target.value });
+          addPersonalInfo({phone: e.target.value});
         }}
       />
 
@@ -52,7 +52,7 @@ export function PersonalInfo({ personalInfo, setPersonalInfo }) {
         type="text"
         placeholder="Email"
         onChange={(e) => {
-          setPersonalInfo({ ...personalInfo, email: e.target.value });
+          addPersonalInfo({email: e.target.value});
         }}
       />
 
@@ -60,7 +60,7 @@ export function PersonalInfo({ personalInfo, setPersonalInfo }) {
         className={`${inputStyle} lg:col-start-1 lg:col-end-5 resize-none md:col-start-1 md:col-end-3`}
         rows="5"
         onChange={(e) => {
-          setPersonalInfo({ ...personalInfo, description: e.target.value });
+          addPersonalInfo({description: e.target.value});
         }}
         defaultValue="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
           voluptatum. Nulla ullam quia dolore eum, excepturi molestiae officia
