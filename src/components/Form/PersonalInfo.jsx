@@ -1,6 +1,6 @@
 import React from "react";
 
-export function PersonalInfo() {
+export function PersonalInfo({ personalInfo, setPersonalInfo }) {
   const inputStyle = `
   bg-slate-700 placeholder-slate-400 p-2.5 rounded-md 
   text-sm text-white border-2 border-slate-700
@@ -15,28 +15,58 @@ export function PersonalInfo() {
         className={`${inputStyle} lg:col-start-1 lg:col-end-3`}
         type="text"
         placeholder="Nombre"
+        onChange={(e) => {
+          setPersonalInfo({ ...personalInfo, firstName: e.target.value });
+        }}
       />
+
       <input
         className={`${inputStyle} lg:col-start-3 lg:col-end-5`}
         type="text"
         placeholder="Apellido"
+        onChange={(e) => {
+          setPersonalInfo({ ...personalInfo, lastName: e.target.value });
+        }}
       />
-      <input className={`${inputStyle}`} type="text" placeholder="Title" />
-      <input className={`${inputStyle}`} type="text" placeholder="Celular" />
+
+      <input
+        className={`${inputStyle}`}
+        type="text"
+        placeholder="Title"
+        onChange={(e) => {
+          setPersonalInfo({ ...personalInfo, title: e.target.value });
+        }}
+      />
+
+      <input
+        className={`${inputStyle}`}
+        type="text"
+        placeholder="Celular"
+        onChange={(e) => {
+          setPersonalInfo({ ...personalInfo, phone: e.target.value });
+        }}
+      />
+
       <input
         className={`${inputStyle} lg:col-start-3 lg:col-end-5 md:col-start-1 md:col-end-3`}
         type="text"
         placeholder="Email"
+        onChange={(e) => {
+          setPersonalInfo({ ...personalInfo, email: e.target.value });
+        }}
       />
+
       <textarea
         className={`${inputStyle} lg:col-start-1 lg:col-end-5 resize-none md:col-start-1 md:col-end-3`}
         rows="5"
-      >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
-        voluptatum. Nulla ullam quia dolore eum, excepturi molestiae officia
-        exercitationem maxime rem expedita vitae sapiente magni doloremque, iure
-        totam aspernatur fuga?
-      </textarea>
+        onChange={(e) => {
+          setPersonalInfo({ ...personalInfo, description: e.target.value });
+        }}
+        defaultValue="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+          voluptatum. Nulla ullam quia dolore eum, excepturi molestiae officia
+          exercitationem maxime rem expedita vitae sapiente magni doloremque, iure
+          totam aspernatur fuga?"
+      ></textarea>
     </div>
   );
 }
