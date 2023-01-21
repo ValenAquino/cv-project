@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-export function ExperienceForm({ itemID, modifyExperience }) {
+export function ExperienceForm({ itemID, modifyExperience, removeExperience }) {
   return (
     <div className="px-4 py-8 bg-slate-500 rounded-md content-center grid gap-3 mb-7 md:grid-cols-4 lg:grid-cols-3">
       <input
@@ -43,7 +43,10 @@ export function ExperienceForm({ itemID, modifyExperience }) {
           modifyExperience(itemID, { to: e.target.value });
         }}
       />
-      <button className="btn scale-90 ml-5 material-symbols-outlined">
+      <button
+        className="btn scale-90 ml-5 material-symbols-outlined"
+        onClick={()=>{removeExperience(itemID)}}
+      >
         delete
       </button>
     </div>

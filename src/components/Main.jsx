@@ -41,9 +41,9 @@ export function Main() {
     );
   }
 
-  // function removeExperience(id) {
-  //   setExperiences(experiences.filter(exp => exp.id !== id));
-  // }
+  function removeExperience(id) {
+    setExperiences(experiences.filter(exp => exp.id !== id));
+  }
 
   const [personalInfo, setPersonalInfo] = useState(personalData);
   const [experiences, setExperiences] = useState([]);
@@ -55,6 +55,7 @@ export function Main() {
         addExperience={addExperience}
         modifyExperience={modifyExperience}
         experiences={experiences}
+        removeExperience={removeExperience}
       />
       <Cv personalInfo={personalInfo} experiences={experiences} />
     </main>

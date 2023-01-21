@@ -3,7 +3,13 @@ import { PersonalInfo } from "./PersonalInfo";
 import { Experience } from "./Experience";
 import { Education } from "./Education";
 
-export function Form({ addPersonalInfo, addExperience, modifyExperience, experiences}) {
+export function Form({
+  addPersonalInfo,
+  addExperience,
+  modifyExperience,
+  experiences,
+  removeExperience,
+}) {
   return (
     <div className="bg-slate-600 lg:px-10 p-10 rounded-md">
       <PersonalInfo addPersonalInfo={addPersonalInfo} />
@@ -11,6 +17,7 @@ export function Form({ addPersonalInfo, addExperience, modifyExperience, experie
         experiences={experiences}
         addExperience={addExperience}
         modifyExperience={modifyExperience}
+        removeExperience={removeExperience}
       />
       <Education />
     </div>

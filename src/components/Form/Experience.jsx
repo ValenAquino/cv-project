@@ -1,7 +1,12 @@
 import React, { useEffect } from "react";
 import { ExperienceForm } from "./components/ExperienceForm";
 
-export function Experience({ experiences, addExperience, modifyExperience }) {
+export function Experience({
+  experiences,
+  addExperience,
+  modifyExperience,
+  removeExperience,
+}) {
   const add_exp_btn = `
     block mx-auto underline underline-offset-4 text-slate-400 hover:text-white"
   `;
@@ -11,6 +16,7 @@ export function Experience({ experiences, addExperience, modifyExperience }) {
       key={experienceItem.id}
       itemID={experienceItem.id}
       modifyExperience={modifyExperience}
+      removeExperience={removeExperience}
     />
   ));
 
