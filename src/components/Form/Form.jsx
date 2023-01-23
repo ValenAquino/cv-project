@@ -23,7 +23,7 @@ export function Form({
         modifyExperience={modifyExperience}
         removeExperience={removeExperience}
       />
-      <Education 
+      <Education
         education={education}
         addEducation={addEducation}
         modifyEducation={modifyEducation}

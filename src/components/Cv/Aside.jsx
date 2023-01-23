@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Aside({personalInfo}) {
+export function Aside({ personalInfo }) {
   const AsideGrid = "row-start-2 row-end-7";
   const AsideStyle = "p-5 text-lg bg-gray-300";
 
@@ -9,9 +9,15 @@ export function Aside({personalInfo}) {
       <h2 className="text-2xl text-slate-800 font-bold mb-3">
         Detalles Personales
       </h2>
-      <span className="block text-slate-800 text-lg mb-2">{personalInfo.direccion}</span>
-      <span className="block text-slate-800 text-lg mb-2">{personalInfo.phone}</span>
-      <span className="block text-slate-800 text-lg mb-2">{personalInfo.email}</span>
+      <span className="block text-slate-800 text-lg mb-2">
+        {personalInfo.direccion}
+      </span>
+      <span className="block text-slate-800 text-lg mb-2">
+        {personalInfo.phone}
+      </span>
+      <span className="block text-slate-800 text-lg mb-2">
+        {personalInfo.email}
+      </span>
     </div>
   );
 }

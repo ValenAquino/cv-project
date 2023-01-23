@@ -10,7 +10,11 @@ export function Cv({ personalInfo, experiences, education }) {
   return (
     <div className={`${cvStyle} ${cvGrid}`}>
       <Header personalInfo={personalInfo} />
-      <Content personalInfo={personalInfo} experiences={experiences} education={education}/>
+      <Content
+        personalInfo={personalInfo}
+        experiences={experiences}
+        education={education}
+      />
       <Aside personalInfo={personalInfo} />
     </div>
   );

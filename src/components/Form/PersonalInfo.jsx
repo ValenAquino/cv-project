@@ -8,9 +8,7 @@ export function PersonalInfo({ addPersonalInfo }) {
 
   return (
     <div className="p-10">
-      <h1 className="mb-5 text-3xl font-semibold">
-        Información Personal
-      </h1>
+      <h1 className="mb-5 text-3xl font-semibold">Información Personal</h1>
       <div className="px-4 py-8 bg-slate-500 rounded-md grid w-full sm:grid-flow-row md:grid-cols-2 lg:grid-cols-4 gap-3">
         <input
           className={`${inputStyle} lg:col-start-1 lg:col-end-3`}

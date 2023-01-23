@@ -56,7 +56,9 @@ export function EducationForm({ modifyEducation, removeEducation, itemID }) {
         onClick={() => {
           removeEducation(itemID);
         }}
-      >delete</button>
+      >
+        delete
+      </button>
     </div>
   );
 }

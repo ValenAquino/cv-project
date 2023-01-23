@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { EducationForm } from "./components/EducationForm";
 
 export function Education({
@@ -16,7 +16,9 @@ export function Education({
     />
   ));
 
-  useEffect(()=>{addEducation()},[]);
+  useEffect(() => {
+    addEducation();
+  }, []);
 
   return (
     <div className="p-12 pt-0 w-full">

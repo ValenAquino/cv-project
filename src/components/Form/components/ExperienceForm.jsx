@@ -45,7 +45,9 @@ export function ExperienceForm({ itemID, modifyExperience, removeExperience }) {
       />
       <button
         className="btn scale-90 ml-5 material-symbols-outlined"
-        onClick={()=>{removeExperience(itemID)}}
+        onClick={() => {
+          removeExperience(itemID);
+        }}
       >
         delete
       </button>
