@@ -1,5 +1,4 @@
 import React from "react";
-import { Education } from "../Form/Education";
 
 function EducationItem({ educationItem }) {
   return (

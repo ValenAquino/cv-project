@@ -18,6 +18,23 @@ hover:bg-orange-700 w-fit justify-self-start rounded-full;
 }
 
 .a4-page {
-  height: 210mm;
-  width: 297mm;
+  width: 210mm;
+  height: 297mm;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal:target {
+  pointer-events: all;
+  opacity: 1;
 }

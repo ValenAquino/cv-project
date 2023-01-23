@@ -2,6 +2,19 @@ import React, { useState } from "react";
 import { Form } from "./Form/Form";
 import { Cv } from "./Cv/Cv";
 
+function Modal({ personalInfo, experiences, education }) {
+  return (
+    <div id="preview" className="p-12 modal grid justify-center items-center h-max">
+      <Cv
+        personalInfo={personalInfo}
+        experiences={experiences}
+        education={education}
+        a4={"a4-page"}
+      />
+    </div>
+  );
+}
+
 export function Main() {
   const personalData = {
     firstName: "",
@@ -92,6 +105,12 @@ export function Main() {
         removeEducation={removeEducation}
       />
       <Cv
+        personalInfo={personalInfo}
+        experiences={experiences}
+        education={education}
+        a4={" "}
+      />
+      <Modal
         personalInfo={personalInfo}
         experiences={experiences}
         education={education}

@@ -1,7 +1,7 @@
 import React from "react";
 
 export function Aside({ personalInfo }) {
-  const AsideGrid = "row-start-2 row-end-7";
+  const AsideGrid = "row-start-2 row-end-7 text-center";
   const AsideStyle = "p-5 text-lg bg-gray-300";
 
   return (

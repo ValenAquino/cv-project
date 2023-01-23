@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 export function ExperienceForm({ itemID, modifyExperience, removeExperience }) {
   return (
