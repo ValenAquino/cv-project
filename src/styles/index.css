@@ -16,3 +16,8 @@
   @apply p-3 bg-orange-400
 hover:bg-orange-700 w-fit justify-self-start rounded-full;
 }
+
+.a4-page {
+  height: 210mm;
+  width: 297mm;
+}

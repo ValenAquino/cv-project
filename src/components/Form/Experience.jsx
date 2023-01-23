@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { ExperienceForm } from "./components/ExperienceForm";
 
 export function Experience({
@@ -19,6 +19,8 @@ export function Experience({
       removeExperience={removeExperience}
     />
   ));
+
+  useEffect(()=>{addExperience()},[]);
 
   return (
     <div className="p-12 pt-0">

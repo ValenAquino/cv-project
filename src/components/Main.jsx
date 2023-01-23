@@ -60,11 +60,11 @@ export function Main() {
 
   function modifyEducation(id, modified) {
     setEducation(
-      education.map((exp) => {
-        if (exp.id === id) {
-          return { ...exp, ...modified };
+      education.map((educationItem) => {
+        if (educationItem.id === id) {
+          return { ...educationItem, ...modified };
         } else {
-          return exp;
+          return educationItem;
         }
       })
     );

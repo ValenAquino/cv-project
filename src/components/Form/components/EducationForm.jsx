@@ -1,10 +1,10 @@
 import React from "react";
 
-export function EducationForm(modifyEducation, removeEducation, itemID) {
+export function EducationForm({ modifyEducation, removeEducation, itemID }) {
   return (
-    <div className="flex flex-wrap flex-column gap-4 mb-5 px-4 py-8 bg-slate-500 rounded-md">
+    <div className="px-4 py-8 bg-slate-500 rounded-md content-center grid gap-3 mb-7 md:grid-cols-4 lg:grid-cols-3">
       <input
-        className="input grow"
+        className="input md:col-start-1 md:col-end-3"
         type="text"
         placeholder="Institución Educativa"
         onChange={(e) => {
@@ -12,7 +12,7 @@ export function EducationForm(modifyEducation, removeEducation, itemID) {
         }}
       />
       <input
-        className="input grow"
+        className="input"
         type="text"
         placeholder="Ciudad"
         onChange={(e) => {
@@ -20,7 +20,7 @@ export function EducationForm(modifyEducation, removeEducation, itemID) {
         }}
       />
       <input
-        className="input grow"
+        className="input md:col-start-1 md:col-end-3"
         type="text"
         placeholder="Titulo"
         onChange={(e) => {
@@ -28,7 +28,7 @@ export function EducationForm(modifyEducation, removeEducation, itemID) {
         }}
       />
       <input
-        className="input grow"
+        className="input"
         type="text"
         placeholder="Rubro"
         onChange={(e) => {
@@ -36,7 +36,7 @@ export function EducationForm(modifyEducation, removeEducation, itemID) {
         }}
       />
       <input
-        className="input grow"
+        className="input"
         type="text"
         placeholder="Desde"
         onChange={(e) => {
@@ -44,13 +44,19 @@ export function EducationForm(modifyEducation, removeEducation, itemID) {
         }}
       />
       <input
-        className="input grow"
+        className="input"
         type="text"
-        placeholder="Desde"
+        placeholder="Hasta"
         onChange={(e) => {
           modifyEducation(itemID, { to: e.target.value });
         }}
       />
+      <button
+        className="btn scale-90 ml-5 material-symbols-outlined"
+        onClick={() => {
+          removeEducation(itemID);
+        }}
+      >delete</button>
     </div>
   );
 }
