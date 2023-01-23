@@ -4,13 +4,19 @@ import { Cv } from "./Cv/Cv";
 
 function Modal({ personalInfo, experiences, education }) {
   return (
-    <div id="preview" className="p-12 modal grid justify-center items-center h-max">
+    <div
+      id="preview"
+      className="p-12 modal grid justify-center items-center h-max stick"
+    >
       <Cv
         personalInfo={personalInfo}
         experiences={experiences}
         education={education}
         a4={"a4-page"}
       />
+      <a href="" className="btn scale-110 material-symbols-outlined fixed top-3 right-4">
+        close
+      </a>
     </div>
   );
 }
