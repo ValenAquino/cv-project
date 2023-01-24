@@ -1,28 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Form } from "./Form/Form";
-import { Cv } from "./Cv/Cv";
+import CvPreview, { Cv } from "./Cv/Cv";
+import { useReactToPrint } from "react-to-print";
 
 function Modal({ personalInfo, experiences, education }) {
   const body = document.getElementById("body");
 
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
+
   return (
     <div id="preview" className="p-12 modal grid justify-center items-center">
-      <Cv
+      <CvPreview
         personalInfo={personalInfo}
         experiences={experiences}
         education={education}
         a4={"a4-page"}
+        ref={componentRef}
       />
-      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-      <a
-        href="#"
-        className="btn scale-110 material-symbols-outlined fixed top-3 right-7"
-        onClick={() => {
-          body.classList.remove("no-scroll");
-        }}
-      >
-        close
-      </a>
+      <div className="fixed top-3 right-7 grid grid-cols-2 gap-4">
+        <button
+          className="btn scale-110 material-symbols-outlined "
+          onClick={handlePrint}
+        >
+          download
+        </button>
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
+        <a
+          href="#"
+          className="btn scale-110 material-symbols-outlined"
+          onClick={() => {
+            body.classList.remove("no-scroll");
+          }}
+        >
+          close
+        </a>
+      </div>
     </div>
   );
 }
@@ -104,7 +119,7 @@ export function Main() {
   const [education, setEducation] = useState([]);
 
   return (
-    <main className="grid grid-cols-1 mx-2 p-16 gap-5 2xl:grid-cols-2 2xl:gap-16 2xl:mx-0 lg:mx-6 xl:mx-24 ">
+    <main className="grid grid-cols-1 mx-2 p-16 gap-5 2xl:grid-cols-2 2xl:gap-16 2xl:mx-0 lg:mx-6 xl:mx-24 my-10">
       <Form
         addPersonalInfo={addPersonalInfo}
         experiences={experiences}
