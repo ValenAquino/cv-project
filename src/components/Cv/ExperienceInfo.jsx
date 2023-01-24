@@ -15,8 +15,8 @@ function ExperienceItem({ experience }) {
 }
 
 export function ExperienceInfo({ experiences }) {
-  const experiencesItems = experiences.map((experience) => (
-    <ExperienceItem experience={experience} />
+  const experiencesItems = experiences.map((experience, i) => (
+    <ExperienceItem  key={i} experience={experience} />
   ));
 
   return (

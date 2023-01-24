@@ -20,8 +20,8 @@ function EducationItem({ educationItem }) {
 }
 
 export function EducationInfo({ education }) {
-  const educationItems = education.map((educationItem) => (
-    <EducationItem educationItem={educationItem} />
+  const educationItems = education.map((educationItem, i) => (
+    <EducationItem key={i} educationItem={educationItem} />
   ));
 
   return (
