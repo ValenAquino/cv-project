@@ -15,7 +15,7 @@ export function Form({
   removeEducation,
 }) {
   return (
-    <div className="bg-slate-600 lg:px-10 p-10 rounded-md">
+    <div className="bg-slate-600 lg:px-10 md:p-10 rounded-md">
       <PersonalInfo addPersonalInfo={addPersonalInfo} />
       <Experience
         experiences={experiences}

@@ -6,8 +6,8 @@ function ExperienceItem({ experience }) {
       <span className="font-medium">
         {experience.from} - {experience.to}
       </span>
-      <span className="text-base">{experience.position}</span>
-      <span className="text-base col-start-2">
+      <span className="text-xs md:text-base">{experience.position}</span>
+      <span className="text-xs md:text-base col-start-2">
         {experience.company}, {experience.city}
       </span>
     </div>
@@ -21,7 +21,7 @@ export function ExperienceInfo({ experiences }) {
 
   return (
     <div className="divide-y divide-slate-400 p-3">
-      <h3 className="mb-2 text-3xl">Experiencia Laboral</h3>
+      <h3 className="mb-2 text-lg md:text-3xl">Experiencia Laboral</h3>
       {experiencesItems}
     </div>
   );

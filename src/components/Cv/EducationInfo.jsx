@@ -6,14 +6,14 @@ function EducationItem({ educationItem }) {
       <span className="font-medium">
         {educationItem.from} - {educationItem.to}
       </span>
-      <span className="text-base">
+      <span className="text-xs md:text-base">
         {educationItem.university}, {educationItem.city}
       </span>
-      <span className="text-base col-start-2">
-        Degree: {educationItem.degree}
+      <span className="text-xs md:text-base col-start-2">
+        <span className="font-semibold">Titulo:</span> {educationItem.degree}
       </span>
-      <span className="text-base col-start-2">
-        Rubro: {educationItem.subject}
+      <span className="text-xs md:text-base col-start-2">
+        <span className="font-semibold">Rubro:</span> {educationItem.subject}
       </span>
     </div>
   );
@@ -26,7 +26,7 @@ export function EducationInfo({ education }) {
 
   return (
     <div className="divide-y divide-slate-400  p-3">
-      <h2 className="mb-2 text-3xl">Educación</h2>
+      <h2 className="mb-2 text-lg md:text-3xl">Educación</h2>
       {educationItems}
     </div>
   );

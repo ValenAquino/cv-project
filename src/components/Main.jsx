@@ -5,8 +5,9 @@ import { useReactToPrint } from "react-to-print";
 
 export function Main({ navRef }) {
   const mainStyles = `
-    grid grid-cols-1 mx-2 p-16 gap-5 my-10
+    grid grid-cols-1 sm:mx-2 sm:p-16 sm:gap-5 sm:my-10
     2xl:grid-cols-2 2xl:gap-16 2xl:mx-0 lg:mx-6 xl:mx-24
+    m-0 w-fit gap-3
   `;
 
   const personalData = {
@@ -26,11 +27,11 @@ export function Main({ navRef }) {
   function addExperience() {
     const exp = {
       id: crypto.randomUUID(),
-      position: "Position",
-      company: "Company",
-      city: "City",
-      from: "From",
-      to: "To",
+      position: "Puesto",
+      company: "Empresa",
+      city: "Ciudad",
+      from: "Desde",
+      to: "Hasta",
     };
 
     setExperiences([...experiences, exp]);
@@ -55,11 +56,11 @@ export function Main({ navRef }) {
   function addEducation() {
     const educationItem = {
       id: crypto.randomUUID(),
-      university: "University",
-      degree: "Degree",
-      subject: "Subject",
-      from: "From",
-      to: "To",
+      university: "Universidad",
+      degree: "Titulo",
+      subject: "Campo",
+      from: "Desde",
+      to: "Hasta",
     };
 
     setEducation([...education, educationItem]);
