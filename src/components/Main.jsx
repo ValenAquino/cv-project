@@ -3,7 +3,7 @@ import { Form } from "./Form/Form";
 import CvPreview, { Cv } from "./Cv/Cv";
 import { useReactToPrint } from "react-to-print";
 
-function Modal({ personalInfo, experiences, education }) {
+function Modal({ personalInfo, experiences, education, navRef }) {
   const body = document.getElementById("body");
 
   const componentRef = useRef();
@@ -33,6 +33,7 @@ function Modal({ personalInfo, experiences, education }) {
           className="btn scale-110 material-symbols-outlined"
           onClick={() => {
             body.classList.remove("no-scroll");
+            navRef.current.classList.add("fixed");
           }}
         >
           close
@@ -42,7 +43,7 @@ function Modal({ personalInfo, experiences, education }) {
   );
 }
 
-export function Main() {
+export function Main({navRef}) {
   const personalData = {
     firstName: "",
     lastName: "",
@@ -141,6 +142,7 @@ export function Main() {
         personalInfo={personalInfo}
         experiences={experiences}
         education={education}
+        navRef={navRef}
       />
     </main>
   );

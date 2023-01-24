@@ -21,7 +21,7 @@ export function ExperienceInfo({ experiences }) {
 
   return (
     <div className="divide-y divide-slate-400 p-3">
-      <h3 className="mb-2 text-3xl">Experience Info</h3>
+      <h3 className="mb-2 text-3xl">Experiencia Laboral</h3>
       {experiencesItems}
     </div>
   );

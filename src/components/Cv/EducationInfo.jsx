@@ -26,7 +26,7 @@ export function EducationInfo({ education }) {
 
   return (
     <div className="divide-y divide-slate-400  p-3">
-      <h2 className="mb-2 text-3xl">Education Info</h2>
+      <h2 className="mb-2 text-3xl">Educación</h2>
       {educationItems}
     </div>
   );

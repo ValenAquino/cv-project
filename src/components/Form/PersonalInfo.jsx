@@ -31,7 +31,7 @@ export function PersonalInfo({ addPersonalInfo }) {
         <input
           className={`${inputStyle}`}
           type="text"
-          placeholder="Title"
+          placeholder="Titulo"
           onChange={(e) => {
             addPersonalInfo({ title: e.target.value });
           }}
@@ -61,10 +61,7 @@ export function PersonalInfo({ addPersonalInfo }) {
           onChange={(e) => {
             addPersonalInfo({ description: e.target.value });
           }}
-          defaultValue="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
-          voluptatum. Nulla ullam quia dolore eum, excepturi molestiae officia
-          exercitationem maxime rem expedita vitae sapiente magni doloremque, iure
-          totam aspernatur fuga?"
+          placeholder="Descripción"
         ></textarea>
       </div>
     </div>

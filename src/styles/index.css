@@ -24,7 +24,7 @@ hover:bg-orange-700 w-fit justify-self-start rounded-full;
 
 .modal {
   position: fixed;
-  overflow-y:scroll;
+  overflow-y: scroll;
   top: 0;
   right: 0;
   bottom: 0;
