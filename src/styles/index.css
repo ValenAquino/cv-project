@@ -23,7 +23,8 @@ hover:bg-orange-700 w-fit justify-self-start rounded-full;
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
+  overflow-y:scroll;
   top: 0;
   right: 0;
   bottom: 0;
@@ -37,4 +38,8 @@ hover:bg-orange-700 w-fit justify-self-start rounded-full;
 .modal:target {
   pointer-events: all;
   opacity: 1;
+}
+
+.no-scroll {
+  overflow: hidden;
 }

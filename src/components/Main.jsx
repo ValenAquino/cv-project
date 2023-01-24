@@ -3,18 +3,24 @@ import { Form } from "./Form/Form";
 import { Cv } from "./Cv/Cv";
 
 function Modal({ personalInfo, experiences, education }) {
+  const body = document.getElementById("body");
+
   return (
-    <div
-      id="preview"
-      className="p-12 modal grid justify-center items-center h-max stick"
-    >
+    <div id="preview" className="p-12 modal grid justify-center items-center">
       <Cv
         personalInfo={personalInfo}
         experiences={experiences}
         education={education}
         a4={"a4-page"}
       />
-      <a href="" className="btn scale-110 material-symbols-outlined fixed top-3 right-4">
+      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
+      <a
+        href="#"
+        className="btn scale-110 material-symbols-outlined fixed top-3 right-7"
+        onClick={() => {
+          body.classList.remove("no-scroll");
+        }}
+      >
         close
       </a>
     </div>
