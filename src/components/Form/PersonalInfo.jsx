@@ -11,7 +11,7 @@ export function PersonalInfo({ addPersonalInfo }) {
       <h1 className="mb-5 text-3xl font-semibold">Información Personal</h1>
       <div className="px-4 py-8 bg-slate-500 rounded-md grid w-full sm:grid-flow-row md:grid-cols-2 lg:grid-cols-4 gap-3">
         <input
-          className={`${inputStyle} lg:col-start-1 lg:col-end-3`}
+          className={`${inputStyle}`}
           type="text"
           placeholder="Nombre"
           onChange={(e) => {
@@ -20,11 +20,20 @@ export function PersonalInfo({ addPersonalInfo }) {
         />
 
         <input
-          className={`${inputStyle} lg:col-start-3 lg:col-end-5`}
+          className={`${inputStyle}`}
           type="text"
           placeholder="Apellido"
           onChange={(e) => {
             addPersonalInfo({ lastName: e.target.value });
+          }}
+        />
+
+        <input
+          className={`${inputStyle} lg:col-start-3 lg:col-end-5`}
+          type="text"
+          placeholder="Dirección"
+          onChange={(e) => {
+            addPersonalInfo({ addres: e.target.value });
           }}
         />
 

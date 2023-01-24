@@ -10,7 +10,7 @@ export function Aside({ personalInfo }) {
         Detalles Personales
       </h2>
       <span className="block text-slate-800 text-lg mb-2">
-        {personalInfo.direccion}
+        {personalInfo.addres}
       </span>
       <span className="block text-slate-800 text-lg mb-2">
         {personalInfo.phone}

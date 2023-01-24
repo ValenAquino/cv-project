@@ -3,47 +3,12 @@ import { Form } from "./Form/Form";
 import CvPreview, { Cv } from "./Cv/Cv";
 import { useReactToPrint } from "react-to-print";
 
-function Modal({ personalInfo, experiences, education, navRef }) {
-  const body = document.getElementById("body");
+export function Main({ navRef }) {
+  const mainStyles = `
+    grid grid-cols-1 mx-2 p-16 gap-5 my-10
+    2xl:grid-cols-2 2xl:gap-16 2xl:mx-0 lg:mx-6 xl:mx-24
+  `;
 
-  const componentRef = useRef();
-  const handlePrint = useReactToPrint({
-    content: () => componentRef.current,
-  });
-
-  return (
-    <div id="preview" className="p-12 modal grid justify-center items-center">
-      <CvPreview
-        personalInfo={personalInfo}
-        experiences={experiences}
-        education={education}
-        a4={"a4-page"}
-        ref={componentRef}
-      />
-      <div className="fixed top-3 right-7 grid grid-cols-2 gap-4">
-        <button
-          className="btn scale-110 material-symbols-outlined "
-          onClick={handlePrint}
-        >
-          download
-        </button>
-        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-        <a
-          href="#"
-          className="btn scale-110 material-symbols-outlined"
-          onClick={() => {
-            body.classList.remove("no-scroll");
-            navRef.current.classList.add("fixed");
-          }}
-        >
-          close
-        </a>
-      </div>
-    </div>
-  );
-}
-
-export function Main({navRef}) {
   const personalData = {
     firstName: "",
     lastName: "",
@@ -51,6 +16,7 @@ export function Main({navRef}) {
     phone: "",
     email: "",
     description: "",
+    addres: "",
   };
 
   function addPersonalInfo(data) {
@@ -120,7 +86,7 @@ export function Main({navRef}) {
   const [education, setEducation] = useState([]);
 
   return (
-    <main className="grid grid-cols-1 mx-2 p-16 gap-5 2xl:grid-cols-2 2xl:gap-16 2xl:mx-0 lg:mx-6 xl:mx-24 my-10">
+    <main className={mainStyles}>
       <Form
         addPersonalInfo={addPersonalInfo}
         experiences={experiences}
@@ -145,5 +111,45 @@ export function Main({navRef}) {
         navRef={navRef}
       />
     </main>
+  );
+}
+
+function Modal({ personalInfo, experiences, education, navRef }) {
+  const body = document.getElementById("body");
+
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
+
+  return (
+    <div id="preview" className="p-12 modal grid justify-center items-center">
+      <CvPreview
+        personalInfo={personalInfo}
+        experiences={experiences}
+        education={education}
+        a4={"a4-page"}
+        ref={componentRef}
+      />
+      <div className="fixed top-3 right-7 grid grid-cols-2 gap-4">
+        <button
+          className="btn scale-110 material-symbols-outlined "
+          onClick={handlePrint}
+        >
+          download
+        </button>
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
+        <a
+          href="#"
+          className="btn scale-110 material-symbols-outlined"
+          onClick={() => {
+            body.classList.remove("no-scroll");
+            navRef.current.classList.add("fixed");
+          }}
+        >
+          close
+        </a>
+      </div>
+    </div>
   );
 }
